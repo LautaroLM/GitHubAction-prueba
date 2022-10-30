@@ -1,9 +1,8 @@
 {
-  "dependencies": {
-    "eslint": "^8.26.0"
-  }
-
-  ,"scripts": {
+  "scripts": {
     "eslint": "eslint"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0"
   }
 }
