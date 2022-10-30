@@ -1,13 +1,20 @@
-name: Prueba github actions
+name: Pipeline de prueba
 
 on:
   push:
     branches: [main]
 
 jobs:
-  hello_world:
+  deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: Escribir mensaje
-        run: |
-          echo "Hola Lautaro"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2with
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm Install
+      - name: Lint
+        run: npm run eslint
