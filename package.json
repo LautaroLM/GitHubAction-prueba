@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "start": "node index.js"
   },
   "devDependencies": {
     "eslint": "^8.26.0"
