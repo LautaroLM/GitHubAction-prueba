@@ -22,6 +22,7 @@ app.get('/api/students', (req, res) =>{
 
 
 app.get('/api/students/:id', (req, res) =>{
+    console.log("HOLAAA!")
     const student = students.find( c => c.id === parseInt(req.params.id));
 
     if(!student) return res.status(404).send('Student no encontrado');
